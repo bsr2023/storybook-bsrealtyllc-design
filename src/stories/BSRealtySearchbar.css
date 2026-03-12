@@ -1,0 +1,44 @@
+/* BS Realty Searchbar — Figma node 167:72 */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500&display=swap');
+
+.bsr-searchbar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 20px;
+  background-color: #d1d3d8;
+  border-radius: 24px;
+  width: 567px;
+  max-width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.bsr-searchbar:focus-within {
+  background-color: #e9eaec;
+  box-shadow: 0 0 0 2px #1e3a5f33;
+}
+
+.bsr-searchbar__icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.bsr-searchbar__input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #25282d;
+  line-height: 1.43;
+  min-width: 0;
+}
+
+.bsr-searchbar__input::placeholder {
+  color: #505660;
+}
