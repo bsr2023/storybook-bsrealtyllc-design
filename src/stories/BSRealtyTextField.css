@@ -1,0 +1,236 @@
+/* BS Realty TextField — Based on Figma design nodes 232:375, 233:309, 233:315 */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500&display=swap');
+
+/* ── Foundation Color Variables ─────────────────────────────── */
+:root {
+  /* Soft White Foundation */
+  --bsr-soft-white-light: #feffff;
+  --bsr-soft-white-normal: #f9fafb;
+  --bsr-soft-white-dark: #bbbcbc;
+  --bsr-soft-white-normal-hover: #edeeef;
+
+  /* Slate Gray Foundation */
+  --bsr-slate-gray-darker: #25282d;
+  --bsr-slate-gray-normal: #6b7280;
+
+  /* Error Red Foundation */
+  --bsr-red-normal: #dc2626;
+  --bsr-red-light: #fce9e9;
+
+  /* Success Green Foundation */
+  --bsr-green-normal: #16a34a;
+  --bsr-green-light: #e8f6ed;
+
+  /* Focus colors */
+  --bsr-focus-ring: rgba(30, 58, 95, 0.4);
+}
+
+/* ── TextField Container ────────────────────────────────────── */
+
+.bsr-textfield {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+.bsr-textfield__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--bsr-soft-white-light);
+  border: 1px solid var(--bsr-soft-white-dark);
+  border-radius: 5px;
+  transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* ── Input Field ────────────────────────────────────────── */
+
+.bsr-textfield__input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--bsr-soft-white-dark);
+  line-height: 1.5;
+  min-width: 0;
+  transition: color 0.15s ease;
+}
+
+.bsr-textfield__input::placeholder {
+  color: var(--bsr-soft-white-dark);
+  font-weight: 500;
+}
+
+/* ── Icon Button (for password toggle) ──────────────────── */
+
+.bsr-textfield__icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  margin-right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--bsr-slate-gray-normal);
+  transition: color 0.15s ease;
+  border-radius: 4px;
+}
+
+.bsr-textfield__icon-button:hover {
+  color: var(--bsr-slate-gray-darker);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.bsr-textfield__icon-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--bsr-focus-ring);
+}
+
+/* ── States: Default & Hover ────────────────────────────── */
+
+.bsr-textfield__container--default:hover:not(.bsr-textfield__container--disabled) {
+  border-color: var(--bsr-slate-gray-normal);
+}
+
+/* ── State: Focus ───────────────────────────────────────── */
+
+.bsr-textfield__container--focused {
+  border-color: var(--bsr-slate-gray-normal);
+  box-shadow: 0 0 0 3px var(--bsr-focus-ring);
+}
+
+/* ── State: Filled ──────────────────────────────────────── */
+
+.bsr-textfield__container--filled .bsr-textfield__input {
+  color: var(--bsr-slate-gray-darker);
+  font-weight: 500;
+}
+
+.bsr-textfield__container--filled .bsr-textfield__input::placeholder {
+  color: var(--bsr-slate-gray-darker);
+}
+
+/* ── State: Disabled ────────────────────────────────────── */
+
+.bsr-textfield__container--disabled {
+  background-color: var(--bsr-soft-white-normal-hover);
+  border-color: var(--bsr-soft-white-dark);
+  cursor: not-allowed;
+}
+
+.bsr-textfield__container--disabled .bsr-textfield__input {
+  color: var(--bsr-soft-white-dark);
+  cursor: not-allowed;
+}
+
+.bsr-textfield__container--disabled .bsr-textfield__input::placeholder {
+  color: var(--bsr-soft-white-dark);
+}
+
+.bsr-textfield__container--disabled .bsr-textfield__icon-button {
+  color: var(--bsr-soft-white-dark);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Variant: Error ─────────────────────────────────────── */
+
+.bsr-textfield__container--error {
+  border-color: var(--bsr-red-normal);
+}
+
+.bsr-textfield__container--error:hover:not(.bsr-textfield__container--disabled) {
+  border-color: var(--bsr-red-normal);
+}
+
+.bsr-textfield__container--error.bsr-textfield__container--focused {
+  border-color: var(--bsr-red-normal);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+}
+
+/* ── Variant: Success ───────────────────────────────────── */
+
+.bsr-textfield__container--success {
+  border-color: var(--bsr-green-normal);
+}
+
+.bsr-textfield__container--success:hover:not(.bsr-textfield__container--disabled) {
+  border-color: var(--bsr-green-normal);
+}
+
+.bsr-textfield__container--success.bsr-textfield__container--focused {
+  border-color: var(--bsr-green-normal);
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+}
+
+/* ── Validation Message ─────────────────────────────────── */
+
+.bsr-textfield__message {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 8px;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.33;
+}
+
+.bsr-textfield__message--error {
+  color: var(--bsr-red-normal);
+}
+
+.bsr-textfield__message--success {
+  color: var(--bsr-green-normal);
+}
+
+.bsr-textfield__message svg {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+}
+
+/* ── Responsive Design ──────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .bsr-textfield__input {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
+
+/* ── Firefox specific styles ────────────────────────────── */
+
+.bsr-textfield__input::-moz-placeholder {
+  opacity: 1;
+}
+
+/* ── WebKit autofill styles ─────────────────────────────── */
+
+.bsr-textfield__input:-webkit-autofill,
+.bsr-textfield__input:-webkit-autofill:hover,
+.bsr-textfield__input:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: var(--bsr-slate-gray-darker);
+  -webkit-box-shadow: 0 0 0px 1000px var(--bsr-soft-white-light) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* ── High contrast mode support ─────────────────────────── */
+
+@media (prefers-contrast: high) {
+  .bsr-textfield__container {
+    border-width: 2px;
+  }
+  
+  .bsr-textfield__container--focused {
+    border-width: 3px;
+  }
+}
