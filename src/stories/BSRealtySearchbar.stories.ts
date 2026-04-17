@@ -3,7 +3,7 @@ import { fn } from 'storybook/test';
 import { BSRealtySearchbar } from './BSRealtySearchbar';
 
 const meta = {
-  title: 'BS Realty/Searchbar',
+  title: 'Components/Searchbar',
   component: BSRealtySearchbar,
   parameters: {
     layout: 'centered',

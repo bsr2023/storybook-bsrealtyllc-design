@@ -1,0 +1,83 @@
+/* BS Realty FAQ — Figma node 329:769 */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500&display=swap');
+
+/* ── Card wrapper ─────────────────────────────────────────── */
+
+.bsr-faq {
+  background-color: #fefffe;
+  border-radius: 10px;
+  width: 668px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* ── Question row ─────────────────────────────────────────── */
+
+/*
+  Why <button> instead of <div>?
+  Buttons are keyboard-accessible by default (Tab + Enter/Space).
+  Using a div would require extra work to replicate this.
+*/
+
+.bsr-faq__question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #25282d;
+  text-align: left;
+  gap: 16px;
+}
+
+.bsr-faq__question-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #25282d;
+  line-height: 1.4;
+}
+
+/* ── Chevron icon ─────────────────────────────────────────── */
+
+/*
+  The icon rotates 180deg when open.
+  We use transform + transition for a smooth animation.
+  currentColor means it inherits #25282d from .bsr-faq__question
+*/
+
+.bsr-faq__icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: #25282d;
+  transition: transform 0.2s ease;
+}
+
+.bsr-faq__icon--open {
+  transform: rotate(180deg);
+}
+
+/* ── Answer row ───────────────────────────────────────────── */
+
+/*
+  Padding matches Figma: 0 top (question already has bottom padding),
+  16px sides, 12px bottom.
+*/
+
+.bsr-faq__answer {
+  padding: 0 16px 12px 16px;
+}
+
+.bsr-faq__answer p {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #40444d;
+  line-height: 1.6;
+}

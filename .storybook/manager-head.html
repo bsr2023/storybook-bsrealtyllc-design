@@ -1,0 +1,25 @@
+<style>
+  /* Storybook 10 brand image — compensate for whitespace padding in PNG */
+  .sidebar-header img,
+  a[title="BS Realty LLC"] img,
+  a[title="BS Realty LLC"] {
+    max-height: 36px !important;
+    max-width: 130px !important;
+    width: auto !important;
+    object-fit: contain;
+  }
+
+  /* Shrink the entire brand link area to remove PNG whitespace */
+  a[title="BS Realty LLC"] {
+    display: flex !important;
+    align-items: center !important;
+    overflow: hidden !important;
+  }
+
+  a[title="BS Realty LLC"] img {
+    /* Scale down to hide the large whitespace margins in the PNG */
+    transform: scale(1.6) !important;
+    transform-origin: left center !important;
+    margin-right: -20px !important;
+  }
+</style>

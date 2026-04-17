@@ -1,0 +1,21 @@
+/* BS Realty Star Rating — from Figma Star Ratings component set 270:1313 */
+
+.bsr-star-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.bsr-star {
+  display: block;
+  flex-shrink: 0;
+}
+
+.bsr-star-rating--interactive .bsr-star {
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.bsr-star-rating--interactive .bsr-star:hover {
+  transform: scale(1.15);
+}

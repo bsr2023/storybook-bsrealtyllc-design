@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { BSRealtyTextField } from './BSRealtyTextField';
 
 const meta = {
-  title: 'BS Realty/TextField',
+  title: 'Components/TextField',
   component: BSRealtyTextField,
   parameters: {
     layout: 'centered',

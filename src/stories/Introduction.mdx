@@ -1,0 +1,171 @@
+{/* Guides/Introduction */}
+
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Guides/Introduction" />
+
+# BS Realty Design System
+
+BS Realty Design System is the in-house component library built to standardize and accelerate
+UI development across all BS Realty products — web, mobile, and insurance services.
+
+All components are built from the official Figma designs and are shared across:
+- `bsrealty-web-main`
+- `insurance-web`
+- `auth-service`
+
+---
+
+## Installation
+
+### Step 1 — Link the package locally
+
+From the `my-storybook-app` folder, run:
+
+```bash
+npm link
+```
+
+Then inside each project that needs the components:
+
+```bash
+# inside bsrealty-web-main
+npm link my-storybook-app
+
+# inside insurance-web
+npm link my-storybook-app
+
+# inside auth-service
+npm link my-storybook-app
+```
+
+### Step 2 — Import components
+
+```tsx
+import { BSRealtyButton } from 'my-storybook-app';
+import { BSRealtySearchbar } from 'my-storybook-app';
+import { BSRealtyPropertyCard } from 'my-storybook-app';
+```
+
+---
+
+## Available Components
+
+<div style={{ display: 'flex', flexDirection: 'column', gap: '8px', maxWidth: '600px', margin: '16px 0' }}>
+  {[
+    { name: 'BSRealtyButton',      desc: 'Primary, Secondary, Text variants', ready: true  },
+    { name: 'BSRealtySearchbar',   desc: 'Search input with icon',            ready: true  },
+    { name: 'BSRealtyTextField',   desc: 'Form text input',                   ready: true  },
+    { name: 'BSRealtyTypography',  desc: 'Heading and text styles',           ready: true  },
+    { name: 'BSRealtyFAQ',         desc: 'Accordion FAQ item',                ready: true  },
+    { name: 'BSRealtyPropertyCard',desc: 'Property listing card',             ready: true  },
+    { name: 'BSRealtyNavbar',      desc: 'Top navigation bar',                ready: false },
+    { name: 'BSRealtyTestimonial', desc: 'Testimonial card',                  ready: false },
+    { name: 'BSRealtyStarRating',  desc: 'Star rating display',               ready: false },
+  ].map(({ name, desc, ready }) => (
+    <div key={name} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '10px 14px', borderRadius: '8px', border: `1px solid ${ready ? '#d1fae5' : '#fef3c7'}`, background: ready ? '#f0fdf4' : '#fffbeb' }}>
+      <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: ready ? '#16a34a' : '#f59e0b', flexShrink: 0 }} />
+      <div style={{ flex: 1 }}>
+        <code style={{ fontSize: '13px', fontWeight: 600, color: '#111827', background: 'transparent', padding: 0 }}>{name}</code>
+        <div style={{ fontSize: '12px', color: '#6b7280', marginTop: '2px' }}>{desc}</div>
+      </div>
+      <span style={{ fontSize: '11px', fontWeight: 600, padding: '2px 10px', borderRadius: '20px', background: ready ? '#dcfce7' : '#fef9c3', color: ready ? '#15803d' : '#a16207', whiteSpace: 'nowrap' }}>
+        {ready ? '✅ Ready' : '🔄 In Progress'}
+      </span>
+    </div>
+  ))}
+</div>
+
+---
+
+## Design Tokens
+
+All components use the following core design values from Figma:
+
+### Colors
+
+<div style={{ display: 'flex', flexDirection: 'column', gap: '8px', maxWidth: '520px' }}>
+  {[
+    { name: 'Primary',        hex: '#1e3a5f', usage: 'Buttons, links',       dark: true  },
+    { name: 'Primary Hover',  hex: '#182e4c', usage: 'Button hover state',   dark: true  },
+    { name: 'Secondary',      hex: '#6b7280', usage: 'Secondary buttons',    dark: true  },
+    { name: 'Text Dark',      hex: '#25282d', usage: 'Headings, labels',     dark: true  },
+    { name: 'Text Muted',     hex: '#707071', usage: 'Addresses, captions',  dark: true  },
+    { name: 'Background',     hex: '#f9fafb', usage: 'Card backgrounds',     dark: false },
+    { name: 'Border',         hex: '#c7c8c9', usage: 'Dividers, borders',    dark: false },
+  ].map(({ name, hex, usage, dark }) => (
+    <div key={hex} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '8px 12px', borderRadius: '8px', border: '1px solid #e5e7eb', background: '#fff' }}>
+      <div style={{ width: '36px', height: '36px', borderRadius: '6px', background: hex, flexShrink: 0, border: '1px solid rgba(0,0,0,0.08)' }} />
+      <div style={{ flex: 1 }}>
+        <div style={{ fontWeight: 600, fontSize: '13px', color: '#111827' }}>{name}</div>
+        <div style={{ fontSize: '12px', color: '#6b7280' }}>{usage}</div>
+      </div>
+      <code style={{ fontSize: '12px', background: '#f3f4f6', padding: '2px 8px', borderRadius: '4px', color: '#374151' }}>{hex}</code>
+    </div>
+  ))}
+</div>
+
+### Typography
+
+<div style={{ display: 'flex', flexDirection: 'column', gap: '12px', margin: '16px 0' }}>
+  <div style={{ fontFamily: 'Lato, sans-serif', fontSize: '24px', fontWeight: 700, color: '#25282d' }}>
+    Heading — 700 weight
+    <span style={{ fontSize: '12px', fontWeight: 400, color: '#6b7280', marginLeft: '12px' }}>Price, titles</span>
+  </div>
+  <div style={{ fontFamily: 'Lato, sans-serif', fontSize: '18px', fontWeight: 500, color: '#25282d' }}>
+    Subheading — 500 weight
+    <span style={{ fontSize: '12px', fontWeight: 400, color: '#6b7280', marginLeft: '12px' }}>Names, labels</span>
+  </div>
+  <div style={{ fontFamily: 'Lato, sans-serif', fontSize: '15px', fontWeight: 400, color: '#25282d' }}>
+    Body — 400 weight
+    <span style={{ fontSize: '12px', color: '#6b7280', marginLeft: '12px' }}>Descriptions, answers</span>
+  </div>
+</div>
+
+> Font family: **Lato** — used across all components.
+
+### Spacing & Shape
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', margin: '16px 0' }}>
+  {[
+    { name: 'Button',    radius: '50px',  label: 'Pill-shaped' },
+    { name: 'Card',      radius: '12px',  label: 'Property cards' },
+    { name: 'FAQ',       radius: '10px',  label: 'FAQ items' },
+    { name: 'Searchbar', radius: '24px',  label: 'Search input' },
+  ].map(({ name, radius, label }) => (
+    <div key={name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
+      <div style={{ width: '64px', height: '36px', background: '#1e3a5f', borderRadius: radius }} />
+      <div style={{ textAlign: 'center' }}>
+        <div style={{ fontSize: '12px', fontWeight: 600, color: '#111827' }}>{name}</div>
+        <code style={{ fontSize: '11px', color: '#6b7280' }}>{radius}</code>
+        <div style={{ fontSize: '11px', color: '#9ca3af' }}>{label}</div>
+      </div>
+    </div>
+  ))}
+</div>
+
+---
+
+## Figma Reference
+
+All components are built from the official BS Realty Figma file.
+Node reference: `45:180` (Components canvas)
+
+---
+
+## Project Structure
+
+```
+my-storybook-app/
+├── src/
+│   └── stories/
+│       ├── BSRealtyButton.tsx       ← component logic
+│       ├── BSRealtyButton.css       ← component styles
+│       ├── BSRealtyButton.stories.ts ← storybook docs
+│       └── ...
+└── package.json
+```
+
+---
+
+*Built by the BS Realty frontend team. Components derived from official Figma designs.*

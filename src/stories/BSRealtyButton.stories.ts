@@ -3,7 +3,7 @@ import { fn } from 'storybook/test';
 import { BSRealtyButton } from './BSRealtyButton';
 
 const meta = {
-  title: 'BS Realty/Button',
+  title: 'Components/Button',
   component: BSRealtyButton,
   parameters: {
     layout: 'centered',

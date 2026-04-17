@@ -1,0 +1,97 @@
+/* BS Realty Testimonial — from Figma Testimonial component 270:1371 */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500&display=swap');
+
+/* ── Wrapper positions the avatar overlapping the card ── */
+.bsr-testimonial {
+  position: relative;
+  width: 413px;
+  padding-top: 26px; /* space for the avatar overhang */
+  font-family: 'Lato', sans-serif;
+}
+
+/* ── Avatar ─────────────────────────────────────────────── */
+.bsr-testimonial__avatar {
+  position: absolute;
+  top: 0;
+  left: 52px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #1e3a5f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.bsr-testimonial__avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bsr-testimonial__avatar-initials {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f9fafb;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+/* ── Card ────────────────────────────────────────────────── */
+.bsr-testimonial__card {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 28px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+/* ── Quote text ──────────────────────────────────────────── */
+.bsr-testimonial__quote {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #505660;
+  margin: 0;
+  width: 100%;
+}
+
+/* ── Footer: name+stars on left, quote icon on right ────── */
+.bsr-testimonial__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bsr-testimonial__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bsr-testimonial__name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #25282d;
+}
+
+/* ── Quote icon ──────────────────────────────────────────── */
+.bsr-testimonial__quote-icon {
+  flex-shrink: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 52px;
+  line-height: 35px;
+  height: 35px;
+  color: #E4E6E8;
+  letter-spacing: -4px;
+  font-weight: 400;
+  user-select: none;
+  display: inline-block;
+  overflow: hidden;
+}

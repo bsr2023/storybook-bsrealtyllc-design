@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { BSRealtyTypography } from './BSRealtyTypography';
 
 const meta = {
-  title: 'BS Realty/Typography',
+  title: 'Components/Typography',
   component: BSRealtyTypography,
   parameters: {
     layout: 'fullscreen',
