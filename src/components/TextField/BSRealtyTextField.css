@@ -2,28 +2,26 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500&display=swap');
 
-/* ── Foundation Color Variables ─────────────────────────────── */
+/* ── Color Variables ─────────────────────────────────────────
+   Previously a local :root block duplicating its own copy of these
+   values; now aliased to the shared tokens in tokens.css (imported
+   globally via .storybook/preview.ts) so there is one source of truth.
+   The same local names are kept as aliases so the rest of this file
+   does not need to change. ─────────────────────────────────────── */
 :root {
-  /* Soft White Foundation */
-  --bsr-soft-white-light: #feffff;
-  --bsr-soft-white-normal: #f9fafb;
-  --bsr-soft-white-dark: #bbbcbc;
-  --bsr-soft-white-normal-hover: #edeeef;
+  --bsr-soft-white-light: var(--bsr-color-white);
+  --bsr-soft-white-normal: var(--bsr-color-surface);
+  --bsr-soft-white-dark: var(--bsr-color-soft-white-dark);
+  --bsr-soft-white-normal-hover: var(--bsr-color-surface-hover);
 
-  /* Slate Gray Foundation */
-  --bsr-slate-gray-darker: #25282d;
-  --bsr-slate-gray-normal: #6b7280;
+  --bsr-slate-gray-darker: var(--bsr-color-text-body);
+  --bsr-slate-gray-normal: var(--bsr-color-text-muted);
 
-  /* Error Red Foundation */
-  --bsr-red-normal: #dc2626;
-  --bsr-red-light: #fce9e9;
+  --bsr-red-normal: var(--bsr-color-error);
+  --bsr-red-light: var(--bsr-color-error-bg);
 
-  /* Success Green Foundation */
-  --bsr-green-normal: #16a34a;
-  --bsr-green-light: #e8f6ed;
-
-  /* Focus colors */
-  --bsr-focus-ring: rgba(30, 58, 95, 0.4);
+  --bsr-green-normal: var(--bsr-color-success);
+  --bsr-green-light: var(--bsr-color-success-bg);
 }
 
 /* ── TextField Container ────────────────────────────────────── */
@@ -85,7 +83,7 @@
 
 .bsr-textfield__icon-button:hover {
   color: var(--bsr-slate-gray-darker);
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--bsr-shadow-hover-tint);
 }
 
 .bsr-textfield__icon-button:focus {
@@ -152,7 +150,7 @@
 
 .bsr-textfield__container--error.bsr-textfield__container--focused {
   border-color: var(--bsr-red-normal);
-  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+  box-shadow: 0 0 0 3px var(--bsr-focus-ring-error);
 }
 
 /* ── Variant: Success ───────────────────────────────────── */
@@ -167,7 +165,7 @@
 
 .bsr-textfield__container--success.bsr-textfield__container--focused {
   border-color: var(--bsr-green-normal);
-  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+  box-shadow: 0 0 0 3px var(--bsr-focus-ring-success);
 }
 
 /* ── Validation Message ─────────────────────────────────── */

@@ -11,83 +11,78 @@
    FOUNDATION VARIABLES
    ──────────────────────────────────────────────────────────────────────────────────────────────────────────────── */
 
+/* All font and color primitives below are aliases to the shared tokens in
+   tokens.css (imported globally via .storybook/preview.ts). This used to
+   be a second, independent token system; keeping the same local names
+   as aliases means the rules further down do not need to change. */
 :root {
-  /* Font Family */
-  --font-family-primary: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  
-  /* Font Weights */
-  --font-weight-light: 300;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  
-  /* Font Sizes (from Figma) */
-  --font-size-display-large: 4rem;        /* 64px */
-  --font-size-display-medium: 3rem;       /* 48px */
-  --font-size-display-small: 2.5rem;      /* 40px */
-  
-  --font-size-headline-large: 2rem;       /* 32px */
-  --font-size-headline-medium: 1.75rem;   /* 28px */
-  --font-size-headline-small: 1.5rem;     /* 24px */
-  
-  --font-size-title-large: 1.375rem;      /* 22px */
-  --font-size-title-medium: 1rem;         /* 16px */
-  --font-size-title-small: 0.875rem;      /* 14px */
-  
-  --font-size-body-large: 1rem;           /* 16px */
-  --font-size-body-medium: 0.875rem;      /* 14px */
-  --font-size-body-small: 0.75rem;        /* 12px */
-  
-  --font-size-label-large: 0.875rem;      /* 14px */
-  --font-size-label-medium: 0.75rem;      /* 12px */
-  --font-size-label-small: 0.6875rem;     /* 11px */
-  
-  /* Line Heights (from Figma) */
-  --line-height-display-large: 4.5rem;    /* 72px */
-  --line-height-display-medium: 3.5rem;   /* 56px */
-  --line-height-display-small: 3rem;      /* 48px */
-  
-  /* ────────────────────────────────────────────────────────────────────────────────────────────────────────────
-     CUSTOM 1.25 SCALE SYSTEM (from Figma - Mathematical Scale)
-     Base: 16px | Scale: 1.25 (Major Third)
-     ──────────────────────────────────────────────────────────────────────────────────────────────────────────── */
-  
-  /* Custom Scale Font Sizes */
-  --font-size-figma-9xl: 3.813rem;        /* 61px - Scale^6 */
-  --font-size-figma-8xl: 3.063rem;        /* 49px - Scale^5 */
-  --font-size-figma-7xl: 2.438rem;        /* 39px - Scale^4 */
-  --font-size-figma-6xl: 1.938rem;        /* 31px - Scale^3 */
-  --font-size-figma-5xl: 1.563rem;        /* 25px - Scale^2 */
-  --font-size-figma-4xl: 1.250rem;        /* 20px - Scale^1 */
-  --font-size-figma-base: 1.000rem;       /* 16px - Base */
-  --font-size-figma-sm: 0.813rem;         /* 13px - Scale^-1 */
-  --font-size-figma-xs: 0.625rem;         /* 10px - Scale^-2 */
-  
-  --line-height-headline-large: 2.5rem;   /* 40px */
-  --line-height-headline-medium: 2.25rem; /* 36px */
-  --line-height-headline-small: 2rem;     /* 32px */
-  
-  --line-height-title-large: 1.75rem;     /* 28px */
-  --line-height-title-medium: 1.5rem;     /* 24px */
-  --line-height-title-small: 1.25rem;     /* 20px */
-  
-  --line-height-body-large: 1.5rem;       /* 24px */
-  --line-height-body-medium: 1.25rem;     /* 20px */
-  --line-height-body-small: 1rem;         /* 16px */
-  
-  --line-height-label-large: 1.25rem;     /* 20px */
-  --line-height-label-medium: 1rem;       /* 16px */
-  --line-height-label-small: 1rem;        /* 16px */
-  
+  --font-family-primary: var(--bsr-font-family-primary);
+
+  --font-weight-light: var(--bsr-font-weight-light);
+  --font-weight-regular: var(--bsr-font-weight-regular);
+  --font-weight-medium: var(--bsr-font-weight-medium);
+  --font-weight-semibold: var(--bsr-font-weight-semibold);
+  --font-weight-bold: var(--bsr-font-weight-bold);
+
+  --font-size-display-large: var(--bsr-font-size-display-large);
+  --font-size-display-medium: var(--bsr-font-size-display-medium);
+  --font-size-display-small: var(--bsr-font-size-display-small);
+
+  --font-size-headline-large: var(--bsr-font-size-headline-large);
+  --font-size-headline-medium: var(--bsr-font-size-headline-medium);
+  --font-size-headline-small: var(--bsr-font-size-headline-small);
+
+  --font-size-title-large: var(--bsr-font-size-title-large);
+  --font-size-title-medium: var(--bsr-font-size-title-medium);
+  --font-size-title-small: var(--bsr-font-size-title-small);
+
+  --font-size-body-large: var(--bsr-font-size-body-large);
+  --font-size-body-medium: var(--bsr-font-size-body-medium);
+  --font-size-body-small: var(--bsr-font-size-body-small);
+
+  --font-size-label-large: var(--bsr-font-size-label-large);
+  --font-size-label-medium: var(--bsr-font-size-label-medium);
+  --font-size-label-small: var(--bsr-font-size-label-small);
+
+  --line-height-display-large: var(--bsr-line-height-display-large);
+  --line-height-display-medium: var(--bsr-line-height-display-medium);
+  --line-height-display-small: var(--bsr-line-height-display-small);
+
+  /* ── Custom 1.25 scale system (Figma mathematical scale, base 16px) ── */
+  --font-size-figma-9xl: var(--bsr-font-size-figma-9xl);
+  --font-size-figma-8xl: var(--bsr-font-size-figma-8xl);
+  --font-size-figma-7xl: var(--bsr-font-size-figma-7xl);
+  --font-size-figma-6xl: var(--bsr-font-size-figma-6xl);
+  --font-size-figma-5xl: var(--bsr-font-size-figma-5xl);
+  --font-size-figma-4xl: var(--bsr-font-size-figma-4xl);
+  --font-size-figma-base: var(--bsr-font-size-figma-base);
+  --font-size-figma-sm: var(--bsr-font-size-figma-sm);
+  --font-size-figma-xs: var(--bsr-font-size-figma-xs);
+
+  --line-height-headline-large: var(--bsr-line-height-headline-large);
+  --line-height-headline-medium: var(--bsr-line-height-headline-medium);
+  --line-height-headline-small: var(--bsr-line-height-headline-small);
+
+  --line-height-title-large: var(--bsr-line-height-title-large);
+  --line-height-title-medium: var(--bsr-line-height-title-medium);
+  --line-height-title-small: var(--bsr-line-height-title-small);
+
+  --line-height-body-large: var(--bsr-line-height-body-large);
+  --line-height-body-medium: var(--bsr-line-height-body-medium);
+  --line-height-body-small: var(--bsr-line-height-body-small);
+
+  --line-height-label-large: var(--bsr-line-height-label-large);
+  --line-height-label-medium: var(--bsr-line-height-label-medium);
+  --line-height-label-small: var(--bsr-line-height-label-small);
+
   /* Colors */
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --text-muted: #6b7280;
-  --text-disabled: #9ca3af;
-  --text-inverse: #ffffff;
-  --text-brand: #1E3A5F;
-  --text-accent: #c9a24d;
+  --text-primary: var(--bsr-color-text-heading);
+  --text-secondary: var(--bsr-color-text-secondary);
+  --text-muted: var(--bsr-color-text-muted);
+  --text-disabled: var(--bsr-color-disabled-fg);
+  --text-inverse: var(--bsr-color-text-inverse);
+  --text-brand: var(--bsr-color-primary);
+  --text-accent: var(--bsr-color-accent-gold);
 }
 
 /* ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -456,7 +451,7 @@
 .typography-showcase {
   font-family: var(--font-family-primary);
   padding: 2rem;
-  background-color: #ffffff;
+  background-color: var(--text-inverse);
   color: var(--text-primary);
 }
 
@@ -476,9 +471,9 @@
 .typography-sample {
   margin-bottom: 2rem;
   padding: 1rem;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--bsr-color-border-muted);
   border-radius: 8px;
-  background-color: #f9fafb;
+  background-color: var(--bsr-color-surface);
 }
 
 .typography-label {
@@ -509,6 +504,6 @@
 .color-sample {
   padding: 1rem;
   border-radius: 8px;
-  background-color: #f9fafb;
-  border: 1px solid #e5e7eb;
+  background-color: var(--bsr-color-surface);
+  border: 1px solid var(--bsr-color-border-muted);
 }

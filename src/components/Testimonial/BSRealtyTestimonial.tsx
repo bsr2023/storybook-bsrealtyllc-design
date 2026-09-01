@@ -1,5 +1,5 @@
 import './BSRealtyTestimonial.css';
-import { BSRealtyStarRating } from './BSRealtyStarRating';
+import { BSRealtyStarRating } from '../StarRating/BSRealtyStarRating';
 
 export interface BSRealtyTestimonialProps {
   /** The testimonial quote text */

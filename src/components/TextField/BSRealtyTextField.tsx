@@ -1,10 +1,12 @@
 import React, { useState, forwardRef } from 'react';
 import './BSRealtyTextField.css';
+import type { Disableable, FieldIdentity, AriaLabelled } from '../../types/shared';
+import { EyeIcon, EyeOffIcon, InfoCircleIcon } from '../../icons/icons';
 
 export type TextFieldVariant = 'default' | 'error' | 'success';
 export type TextFieldState = 'default' | 'hover' | 'focus' | 'filled' | 'disabled' | 'typing';
 
-export interface BSRealtyTextFieldProps {
+export interface BSRealtyTextFieldProps extends Disableable, FieldIdentity, AriaLabelled {
   /** Input placeholder text */
   placeholder?: string;
   /** Input type */
@@ -15,8 +17,6 @@ export interface BSRealtyTextFieldProps {
   defaultValue?: string;
   /** Visual variant */
   variant?: TextFieldVariant;
-  /** Disabled state */
-  disabled?: boolean;
   /** Required field */
   required?: boolean;
   /** Error message to display */
@@ -31,41 +31,7 @@ export interface BSRealtyTextFieldProps {
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
   /** Blur handler */
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
-  /** Input name attribute */
-  name?: string;
-  /** Input id attribute */
-  id?: string;
-  /** Accessibility label */
-  'aria-label'?: string;
-  /** Accessibility described by */
-  'aria-describedby'?: string;
 }
-
-// Eye icon for password visibility toggle
-const EyeIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M1 8s3-5 7-5 7 5 7 5-3 5-7 5-7-5-7-5z" />
-    <circle cx="8" cy="8" r="2" />
-  </svg>
-);
-
-// Eye off icon for password visibility toggle
-const EyeOffIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M10.5 5.5A4 4 0 0 0 8 4c-4 0-7 5-7 5a13.16 13.16 0 0 0 1.7 2.3M6.5 10.5A4 4 0 0 1 8 12c4 0 7-5 7-5a13.16 13.16 0 0 1-1.7-2.3" />
-    <path d="M1 1l14 14" />
-    <path d="M6.5 6.5A2 2 0 0 1 10.5 10.5" />
-  </svg>
-);
-
-// Information circle icon for validation
-const InformationCircleIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="8" cy="8" r="6" />
-    <path d="M8 12V8" />
-    <path d="M8 6h.01" />
-  </svg>
-);
 
 export const BSRealtyTextField = forwardRef<HTMLInputElement, BSRealtyTextFieldProps>(({
   placeholder = 'Input placeholder',
@@ -163,7 +129,7 @@ export const BSRealtyTextField = forwardRef<HTMLInputElement, BSRealtyTextFieldP
             aria-label={showPassword ? 'Hide password' : 'Show password'}
             tabIndex={-1}
           >
-            {showPassword ? <EyeOffIcon /> : <EyeIcon />}
+            {showPassword ? <EyeOffIcon size={16} /> : <EyeIcon size={16} />}
           </button>
         )}
       </div>
@@ -176,7 +142,7 @@ export const BSRealtyTextField = forwardRef<HTMLInputElement, BSRealtyTextFieldP
           ].join(' ')}
           id={messageId}
         >
-          <InformationCircleIcon />
+          <InfoCircleIcon size={16} />
           <span>{displayMessage}</span>
         </div>
       )}

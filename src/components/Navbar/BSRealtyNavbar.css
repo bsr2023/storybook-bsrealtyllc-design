@@ -12,7 +12,7 @@
   max-width: 1280px;
   padding: 8px 20px;
   border-radius: 12px;
-  background-color: #f9fafb;
+  background-color: var(--bsr-color-surface);
   box-sizing: border-box;
   list-style: none;
 }
@@ -57,7 +57,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 1.43;
-  color: #25282d;
+  color: var(--bsr-color-text-body);
   text-decoration: none;
   border-radius: 6px;
   cursor: pointer;
@@ -66,17 +66,17 @@
 }
 
 .bsr-navbar__link:hover {
-  background-color: #e9ebef;
-  color: #1e3a5f;
+  background-color: var(--bsr-color-surface-navhover);
+  color: var(--bsr-color-primary);
 }
 
 .bsr-navbar__link--active {
-  color: #1e3a5f;
-  background-color: #e9ebef;
+  color: var(--bsr-color-primary);
+  background-color: var(--bsr-color-surface-navhover);
 }
 
-.bsr-navbar__link--active .bsr-navbar__chevron path {
-  stroke: #1e3a5f;
+.bsr-navbar__link--active .bsr-navbar__chevron {
+  color: var(--bsr-color-primary);
 }
 
 /* ---- Chevron icon ---- */
@@ -99,21 +99,21 @@
   padding: 8px;
   border-radius: 50px;
   border: none;
-  background-color: #1e3a5f;
+  background-color: var(--bsr-color-primary);
   cursor: pointer;
   transition: background-color 0.15s ease;
 
-  font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+  font-family: var(--bsr-font-family-nav);
   font-weight: 500;
   font-size: 12px;
   line-height: 1.33;
-  color: #ffffff;
+  color: var(--bsr-color-text-inverse);
 }
 
 .bsr-navbar__login:hover {
-  background-color: #253f66;
+  background-color: var(--bsr-color-primary-subtle);
 }
 
 .bsr-navbar__login:active {
-  background-color: #172c47;
+  background-color: var(--bsr-color-primary-active);
 }

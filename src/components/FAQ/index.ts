@@ -1,0 +1,1 @@
+export { BSRealtyFAQ } from './BSRealtyFAQ';

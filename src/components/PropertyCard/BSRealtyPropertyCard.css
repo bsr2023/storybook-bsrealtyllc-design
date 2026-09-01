@@ -7,7 +7,7 @@
 .bsr-property-card {
   width: 413px;
   max-width: 100%;
-  background-color: #f9fafb;
+  background-color: var(--bsr-color-surface);
   border-radius: 12px;
   overflow: hidden;       /* clips the image to the card's rounded corners */
   display: flex;
@@ -52,7 +52,7 @@
 /*
   justify-content: space-between pushes the button to the right.
   border-bottom separates this row from the details row below.
-  The stroke in Figma (rgb 199,200,201) maps to #c7c8c9.
+  The stroke in Figma (rgb 199,200,201) maps to var(--bsr-color-border).
 */
 
 .bsr-property-card__info {
@@ -61,7 +61,7 @@
   justify-content: space-between;
   gap: 16px;
   padding-bottom: 8px;
-  border-bottom: 1px solid #c7c8c9;
+  border-bottom: 1px solid var(--bsr-color-border);
 }
 
 /* ── Text stack (price, name, address) ────────────────────── */
@@ -76,7 +76,7 @@
   font-family: 'Lato', sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #111827;
+  color: var(--bsr-color-text-heading);
   line-height: 1.4;
 }
 
@@ -84,7 +84,7 @@
   font-family: 'Lato', sans-serif;
   font-size: 20px;
   font-weight: 500;
-  color: #30333a;
+  color: var(--bsr-color-text-faint);
   line-height: 1.4;
 }
 
@@ -92,7 +92,7 @@
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #707071;
+  color: var(--bsr-color-text-subtle);
   line-height: 1.5;
 }
 
@@ -105,7 +105,7 @@
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #565b66;
+  color: var(--bsr-color-secondary-hover);
 }
 
 /*
@@ -117,5 +117,5 @@
 .bsr-property-card__details span + span::before {
   content: '·';
   margin-right: 8px;
-  color: #c7c8c9;
+  color: var(--bsr-color-border);
 }

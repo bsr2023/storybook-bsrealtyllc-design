@@ -1,4 +1,5 @@
 import './BSRealtyNavbar.css';
+import { ChevronDownIcon } from '../../icons/icons';
 
 export interface NavItem {
   label: string;
@@ -25,28 +26,6 @@ const DEFAULT_NAV_ITEMS: NavItem[] = [
   { label: 'About', hasDropdown: true },
   { label: 'Contact', hasDropdown: false },
 ];
-
-function ChevronDown() {
-  return (
-    <svg
-      className="bsr-navbar__chevron"
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <path
-        d="M5 7.5L10 12.5L15 7.5"
-        stroke="#25282D"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
 export function BSRealtyNavbar({
   logo = '/logo-new.png',
@@ -75,7 +54,7 @@ export function BSRealtyNavbar({
               aria-current={activeItem === item.label ? 'page' : undefined}
             >
               <span>{item.label}</span>
-              {item.hasDropdown && <ChevronDown />}
+              {item.hasDropdown && <ChevronDownIcon size={20} className="bsr-navbar__chevron" />}
             </a>
           </li>
         ))}

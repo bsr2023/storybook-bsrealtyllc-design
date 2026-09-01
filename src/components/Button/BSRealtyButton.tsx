@@ -1,9 +1,10 @@
 import './BSRealtyButton.css';
+import type { Disableable } from '../../types/shared';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'text';
 export type ButtonSize = 'xs' | 'xs-medium' | 'small' | 'medium' | 'large' | 'xl' | '2xl';
 
-export interface BSRealtyButtonProps {
+export interface BSRealtyButtonProps extends Disableable {
   /** Button label */
   label?: string;
   /** Visual variant */
@@ -14,8 +15,6 @@ export interface BSRealtyButtonProps {
   showLeftIcon?: boolean;
   /** Whether to show the right icon */
   showRightIcon?: boolean;
-  /** Disabled state */
-  disabled?: boolean;
   /** Click handler */
   onClick?: () => void;
 }

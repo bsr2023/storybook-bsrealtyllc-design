@@ -5,7 +5,7 @@
 /* ── Card wrapper ─────────────────────────────────────────── */
 
 .bsr-faq {
-  background-color: #fefffe;
+  background-color: var(--bsr-color-white);
   border-radius: 10px;
   width: 668px;
   max-width: 100%;
@@ -29,7 +29,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #25282d;
+  color: var(--bsr-color-text-body);
   text-align: left;
   gap: 16px;
 }
@@ -38,7 +38,7 @@
   font-family: 'Lato', sans-serif;
   font-size: 18px;
   font-weight: 500;
-  color: #25282d;
+  color: var(--bsr-color-text-body);
   line-height: 1.4;
 }
 
@@ -47,14 +47,14 @@
 /*
   The icon rotates 180deg when open.
   We use transform + transition for a smooth animation.
-  currentColor means it inherits #25282d from .bsr-faq__question
+  currentColor means it inherits var(--bsr-color-text-body) from .bsr-faq__question
 */
 
 .bsr-faq__icon {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  color: #25282d;
+  color: var(--bsr-color-text-body);
   transition: transform 0.2s ease;
 }
 
@@ -78,6 +78,6 @@
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #40444d;
+  color: var(--bsr-color-text-faq-answer);
   line-height: 1.6;
 }

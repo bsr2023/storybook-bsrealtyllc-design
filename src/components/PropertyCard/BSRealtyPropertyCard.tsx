@@ -1,4 +1,4 @@
-import { BSRealtyButton } from './BSRealtyButton';
+import { BSRealtyButton } from '../Button/BSRealtyButton';
 import './BSRealtyPropertyCard.css';
 
 export interface BSRealtyPropertyCardProps {

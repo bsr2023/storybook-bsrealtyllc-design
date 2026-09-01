@@ -1,0 +1,1 @@
+export { BSRealtyStarRating } from './BSRealtyStarRating';

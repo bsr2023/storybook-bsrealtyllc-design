@@ -1,0 +1,1 @@
+export { BSRealtyTypography } from './BSRealtyTypography';

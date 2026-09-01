@@ -1,44 +1,132 @@
 {
-  "name": "my-storybook-app",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@bsrealty/design-system",
+  "version": "0.1.0",
+  "description": "BSRealty design system — shared React components, icons, and design tokens.",
+  "private": false,
   "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./Avatar": {
+      "types": "./dist/components/Avatar/index.d.ts",
+      "import": "./dist/Avatar.js",
+      "require": "./dist/Avatar.cjs"
+    },
+    "./Button": {
+      "types": "./dist/components/Button/index.d.ts",
+      "import": "./dist/Button.js",
+      "require": "./dist/Button.cjs"
+    },
+    "./FAQ": {
+      "types": "./dist/components/FAQ/index.d.ts",
+      "import": "./dist/FAQ.js",
+      "require": "./dist/FAQ.cjs"
+    },
+    "./Navbar": {
+      "types": "./dist/components/Navbar/index.d.ts",
+      "import": "./dist/Navbar.js",
+      "require": "./dist/Navbar.cjs"
+    },
+    "./PasswordField": {
+      "types": "./dist/components/PasswordField/index.d.ts",
+      "import": "./dist/PasswordField.js",
+      "require": "./dist/PasswordField.cjs"
+    },
+    "./PropertyCard": {
+      "types": "./dist/components/PropertyCard/index.d.ts",
+      "import": "./dist/PropertyCard.js",
+      "require": "./dist/PropertyCard.cjs"
+    },
+    "./SearchBar": {
+      "types": "./dist/components/SearchBar/index.d.ts",
+      "import": "./dist/SearchBar.js",
+      "require": "./dist/SearchBar.cjs"
+    },
+    "./ServiceCard": {
+      "types": "./dist/components/ServiceCard/index.d.ts",
+      "import": "./dist/ServiceCard.js",
+      "require": "./dist/ServiceCard.cjs"
+    },
+    "./StarRating": {
+      "types": "./dist/components/StarRating/index.d.ts",
+      "import": "./dist/StarRating.js",
+      "require": "./dist/StarRating.cjs"
+    },
+    "./Testimonial": {
+      "types": "./dist/components/Testimonial/index.d.ts",
+      "import": "./dist/Testimonial.js",
+      "require": "./dist/Testimonial.cjs"
+    },
+    "./TextField": {
+      "types": "./dist/components/TextField/index.d.ts",
+      "import": "./dist/TextField.js",
+      "require": "./dist/TextField.cjs"
+    },
+    "./Typography": {
+      "types": "./dist/components/Typography/index.d.ts",
+      "import": "./dist/Typography.js",
+      "require": "./dist/Typography.cjs"
+    },
+    "./icons": {
+      "types": "./dist/icons/index.d.ts",
+      "import": "./dist/icons.js",
+      "require": "./dist/icons.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "storybook build --output-dir dist",
+    "build": "storybook build --output-dir storybook-static",
+    "build:lib": "vite build --config vite.lib.config.ts",
+    "prepublishOnly": "npm run build:lib",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build --output-dir storybook-static"
   },
-  "dependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
+    "@chromatic-com/storybook": "^5.0.1",
     "@eslint/js": "^9.39.1",
+    "@storybook/addon-a11y": "^10.2.17",
+    "@storybook/addon-docs": "^10.2.17",
+    "@storybook/addon-onboarding": "^10.2.17",
+    "@storybook/addon-vitest": "^10.2.17",
+    "@storybook/react-vite": "^10.2.17",
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
+    "@vitest/browser-playwright": "^4.0.18",
+    "@vitest/coverage-v8": "^4.0.18",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
+    "eslint-plugin-storybook": "^10.2.17",
     "globals": "^16.5.0",
+    "playwright": "^1.58.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "storybook": "^10.2.17",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.48.0",
     "vite": "^7.3.1",
-    "storybook": "^10.2.17",
-    "@storybook/react-vite": "^10.2.17",
-    "@chromatic-com/storybook": "^5.0.1",
-    "@storybook/addon-vitest": "^10.2.17",
-    "@storybook/addon-a11y": "^10.2.17",
-    "@storybook/addon-docs": "^10.2.17",
-    "@storybook/addon-onboarding": "^10.2.17",
-    "eslint-plugin-storybook": "^10.2.17",
-    "vitest": "^4.0.18",
-    "playwright": "^1.58.2",
-    "@vitest/browser-playwright": "^4.0.18",
-    "@vitest/coverage-v8": "^4.0.18"
+    "vite-plugin-dts": "^5.0.3",
+    "vitest": "^4.0.18"
   }
 }

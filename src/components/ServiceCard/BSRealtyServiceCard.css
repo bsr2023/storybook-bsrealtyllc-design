@@ -9,7 +9,7 @@
   gap: 24px;
   padding: 20px;
   width: 305px;
-  background-color: #f0f1f2;
+  background-color: var(--bsr-color-surface-alt);
   border-radius: 16px;
   font-family: 'Lato', sans-serif;
   box-sizing: border-box;
@@ -23,7 +23,7 @@
   align-items: stretch;
   gap: 10px;
   padding: 12px;
-  background-color: #f9fafb;
+  background-color: var(--bsr-color-surface);
   border-radius: 30px;
   width: fit-content;
 }
@@ -32,7 +32,7 @@
   font-size: 22px;
   font-weight: 700;
   line-height: 1.273;
-  color: #111827;
+  color: var(--bsr-color-text-heading);
 }
 
 /* ── Text content ────────────────────────────────────────── */
@@ -48,7 +48,7 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 1.4;
-  color: #25282d;
+  color: var(--bsr-color-text-body);
 }
 
 /* Description: Website/Body/large — Lato 400 16px */
@@ -57,5 +57,5 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  color: #505660;
+  color: var(--bsr-color-text-muted-alt);
 }

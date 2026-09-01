@@ -1,0 +1,54 @@
+/* BS Realty Avatar */
+
+.bsr-avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: var(--bsr-radius-full);
+  background: var(--bsr-color-primary);
+  color: var(--bsr-color-text-inverse);
+  font-family: var(--bsr-font-family-primary);
+  font-weight: var(--bsr-font-weight-semibold);
+  overflow: hidden;
+  user-select: none;
+}
+
+.bsr-avatar__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bsr-avatar__initials {
+  line-height: 1;
+}
+
+/* ── Sizes ─────────────────────────────────────────────────────── */
+
+.bsr-avatar--sm {
+  width: 24px;
+  height: 24px;
+  font-size: var(--bsr-font-size-label-small);
+}
+
+.bsr-avatar--md {
+  width: 32px;
+  height: 32px;
+  font-size: var(--bsr-font-size-label-medium);
+}
+
+.bsr-avatar--lg {
+  width: 48px;
+  height: 48px;
+  font-size: var(--bsr-font-size-body-medium);
+}
+
+.bsr-avatar--xl {
+  width: 64px;
+  height: 64px;
+  font-size: var(--bsr-font-size-title-medium);
+}
