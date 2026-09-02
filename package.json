@@ -84,6 +84,11 @@
       "import": "./dist/icons.js",
       "require": "./dist/icons.cjs"
     },
+    "./CourseCard": {
+      "types": "./dist/CourseCard/index.d.ts",
+      "import": "./dist/CourseCard.js",
+      "require": "./dist/CourseCard.cjs"
+    },
     "./style.css": "./dist/style.css"
   },
   "scripts": {

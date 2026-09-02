@@ -59,6 +59,7 @@ export default defineConfig({
         TextField: resolve(__dirname, 'src/components/TextField/index.ts'),
         Typography: resolve(__dirname, 'src/components/Typography/index.ts'),
         icons: resolve(__dirname, 'src/icons/index.ts'),
+        CourseCard: resolve(__dirname, 'src/CourseCard/index.ts'),
         // src/types/index.ts is type-only (interfaces are erased at build
         // time) — deliberately NOT a lib entry, it would emit an empty JS
         // chunk. Its .d.ts still ships via the main `index.ts` barrel, so

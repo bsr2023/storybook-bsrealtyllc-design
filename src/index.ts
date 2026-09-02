@@ -25,6 +25,7 @@ export * from './components/StarRating';
 export * from './components/Testimonial';
 export * from './components/TextField';
 export * from './components/Typography';
+export * from './components/CourseCard';
 
 // Icons
 export * from './icons';
