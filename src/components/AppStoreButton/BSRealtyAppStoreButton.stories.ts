@@ -1,9 +1,9 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import { BSRealtyGooglePlayButton } from './BSRealtyGooglePlayButton';
+import { BSRealtyAppStoreButton } from './BSRealtyAppStoreButton';
 
 const meta = {
-title: 'Components/GooglePlayButton',
-component: BSRealtyGooglePlayButton,
+title: 'Components/AppStoreButton',
+component: BSRealtyAppStoreButton,
 parameters: { layout: 'centered' },
 tags: ['autodocs'],
 argTypes: {
@@ -14,12 +14,12 @@ onClick:{action:'clicked'},
 
 } ;
 export default meta;
-type Story = StoryObj<typeof BSRealtyGooglePlayButton>;
+type Story = StoryObj<typeof BSRealtyAppStoreButton>;
 
 /** Default state */
 export const Default: Story = {
     args:{
-        href:"https://play.google.com/store",
-        imageSrc:"/images/google-play-button.png",
+        href:"https://apps.apple.com/app/id123456789",
+        imageSrc:"/images/app-store-button.png",
     }
 }

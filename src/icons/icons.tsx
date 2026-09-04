@@ -93,3 +93,24 @@ export const ChevronDownIcon = ({ size = 20, ...props }: IconProps) => (
     <polyline points="6 9 12 15 18 9" />
   </svg>
 );
+
+/** Arrow right — used for action buttons and navigation. */
+export const ArrowRight = ({ size = 14, ...props }: IconProps) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 14 11"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    {...props}
+  >
+    <path
+      d="M8.08333 10.0833L12.75 5.41667L8.08333 0.75M12.75 5.41667L0.75 5.41667"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

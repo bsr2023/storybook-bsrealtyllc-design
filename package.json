@@ -94,6 +94,11 @@
       "import": "./dist/GooglePlayButton.js",
       "require": "./dist/GooglePlayButton.cjs"
     },
+    "./AppStoreButton": {
+      "types": "./dist/AppStoreButton/index.d.ts",
+      "import": "./dist/AppStoreButton.js",
+      "require": "./dist/AppStoreButton.cjs"
+    },
     
     "./style.css": "./dist/style.css"
   },

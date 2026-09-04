@@ -27,6 +27,7 @@ export * from './components/TextField';
 export * from './components/Typography';
 export * from './components/CourseCard';
 export * from './components/GooglePlayButton';
+export * from './components/AppStoreButton';
 
 // Icons
 export * from './icons';
