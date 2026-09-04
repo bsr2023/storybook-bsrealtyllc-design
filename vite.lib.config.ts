@@ -62,6 +62,7 @@ export default defineConfig({
         CourseCard: resolve(__dirname, 'src/CourseCard/index.ts'),
         GooglePlayButton: resolve(__dirname, 'src/GooglePlayButton/index.ts'),
         AppStoreButton: resolve(__dirname, 'src/AppStoreButton/index.ts'),
+        SocialIcon: resolve(__dirname, 'src/SocialIcon/index.ts'),
         // src/types/index.ts is type-only (interfaces are erased at build
         // time) — deliberately NOT a lib entry, it would emit an empty JS
         // chunk. Its .d.ts still ships via the main `index.ts` barrel, so

@@ -1,5 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import { BSRealtyGooglePlayButton } from './BSRealtyGooglePlayButton';
+import { fn } from 'storybook/test';
 
 const meta = {
 title: 'Components/GooglePlayButton',
@@ -11,8 +12,9 @@ href:{control:'text'},
 imageSrc:{control:'text'},
 onClick:{action:'clicked'},
 },
+args: { onClick: fn() },
+} satisfies Meta<typeof BSRealtyGooglePlayButton>;
 
-} ;
 export default meta;
 type Story = StoryObj<typeof BSRealtyGooglePlayButton>;
 

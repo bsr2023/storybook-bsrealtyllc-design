@@ -99,6 +99,11 @@
       "import": "./dist/AppStoreButton.js",
       "require": "./dist/AppStoreButton.cjs"
     },
+    "./SocialIcon": {
+      "types": "./dist/SocialIcon/index.d.ts",
+      "import": "./dist/SocialIcon.js",
+      "require": "./dist/SocialIcon.cjs"
+    },
     
     "./style.css": "./dist/style.css"
   },

@@ -1,5 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import { BSRealtyAppStoreButton } from './BSRealtyAppStoreButton';
+import { fn } from 'storybook/test';
 
 const meta = {
 title: 'Components/AppStoreButton',
@@ -11,8 +12,9 @@ href:{control:'text'},
 imageSrc:{control:'text'},
 onClick:{action:'clicked'},
 },
+args: { onClick: fn() },
+} satisfies Meta<typeof BSRealtyAppStoreButton>;
 
-} ;
 export default meta;
 type Story = StoryObj<typeof BSRealtyAppStoreButton>;
 

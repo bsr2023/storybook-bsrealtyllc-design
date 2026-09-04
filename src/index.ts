@@ -28,6 +28,7 @@ export * from './components/Typography';
 export * from './components/CourseCard';
 export * from './components/GooglePlayButton';
 export * from './components/AppStoreButton';
+export * from './components/SocialIcon';
 
 // Icons
 export * from './icons';
