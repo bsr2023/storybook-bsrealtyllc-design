@@ -104,6 +104,11 @@
       "import": "./dist/SocialIcon.js",
       "require": "./dist/SocialIcon.cjs"
     },
+    "./Dropdown": {
+      "types": "./dist/Dropdown/index.d.ts",
+      "import": "./dist/Dropdown.js",
+      "require": "./dist/Dropdown.cjs"
+    },
     
     "./style.css": "./dist/style.css"
   },

@@ -13,25 +13,26 @@
  */
 
 // Components
-export * from './components/Avatar';
-export * from './components/Button';
-export * from './components/FAQ';
-export * from './components/Navbar';
-export * from './components/PasswordField';
-export * from './components/PropertyCard';
-export * from './components/SearchBar';
-export * from './components/ServiceCard';
-export * from './components/StarRating';
-export * from './components/Testimonial';
-export * from './components/TextField';
-export * from './components/Typography';
-export * from './components/CourseCard';
-export * from './components/GooglePlayButton';
-export * from './components/AppStoreButton';
-export * from './components/SocialIcon';
+export * from "./components/Avatar";
+export * from "./components/Button";
+export * from "./components/FAQ";
+export * from "./components/Navbar";
+export * from "./components/PasswordField";
+export * from "./components/PropertyCard";
+export * from "./components/SearchBar";
+export * from "./components/ServiceCard";
+export * from "./components/StarRating";
+export * from "./components/Testimonial";
+export * from "./components/TextField";
+export * from "./components/Typography";
+export * from "./components/CourseCard";
+export * from "./components/GooglePlayButton";
+export * from "./components/AppStoreButton";
+export * from "./components/SocialIcon";
+export * from "./components/Dropdown";
 
 // Icons
-export * from './icons';
+export * from "./icons";
 
 // Shared types
-export * from './types';
+export * from "./types";

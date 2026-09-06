@@ -25,12 +25,15 @@
   --bsr-color-surface-navhover: #e9ebef; /* navbar link hover/active background */
   --bsr-color-surface-texthover: #e0e1e2; /* text-variant button hover */
   --bsr-color-surface-card-hover: #f8f8f8; /* course card hover background */
+  --bsr-color-selected: #dde1e7;
+  /*dropdown option selected / hover background */
 
   /* ── Borders ───────────────────────────────────────────────────── */
   --bsr-color-border: #c7c8c9; /* property card divider/stroke */
   --bsr-color-border-muted: #e5e7eb; /* textfield/password disabled border */
   --bsr-color-border-strong: #959697; /* password field default border */
-
+  --bsr-color-border-trust: #1e3a5f; /*dropdown selected border*/
+  
   /* ── Disabled ──────────────────────────────────────────────────── */
   --bsr-color-disabled-bg-primary: #b9c2cd; /* primary button disabled bg */
   --bsr-color-disabled-bg-secondary: #d1d3d8; /* secondary button disabled bg */
