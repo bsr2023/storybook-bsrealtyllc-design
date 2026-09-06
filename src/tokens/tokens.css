@@ -33,7 +33,7 @@
   --bsr-color-border-muted: #e5e7eb; /* textfield/password disabled border */
   --bsr-color-border-strong: #959697; /* password field default border */
   --bsr-color-border-trust: #1e3a5f; /*dropdown selected border*/
-  
+
   /* ── Disabled ──────────────────────────────────────────────────── */
   --bsr-color-disabled-bg-primary: #b9c2cd; /* primary button disabled bg */
   --bsr-color-disabled-bg-secondary: #d1d3d8; /* secondary button disabled bg */
@@ -53,6 +53,7 @@
   --bsr-color-text-faq-answer: #40444d; /* FAQ answer copy */
   --bsr-color-text-inverse: #ffffff; /* text on dark/brand backgrounds */
   --bsr-color-quote-icon: #e4e6e8; /* testimonial decorative quote mark */
+  --bsr-color-text-soft-white: #575858; /*Breadcrumb */
 
   /* ── Status ────────────────────────────────────────────────────── */
   --bsr-color-error: #dc2626;

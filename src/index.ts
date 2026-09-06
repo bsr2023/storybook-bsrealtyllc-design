@@ -30,6 +30,7 @@ export * from "./components/GooglePlayButton";
 export * from "./components/AppStoreButton";
 export * from "./components/SocialIcon";
 export * from "./components/Dropdown";
+export * from "./components/Breadcrumb";
 
 // Icons
 export * from "./icons";

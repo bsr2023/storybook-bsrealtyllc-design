@@ -109,6 +109,11 @@
       "import": "./dist/Dropdown.js",
       "require": "./dist/Dropdown.cjs"
     },
+    "./Breadcrumb": {
+      "types": "./dist/Breadcrumb/index.d.ts",
+      "import": "./dist/Breadcrumb.js",
+      "require": "./dist/Breadcrumb.cjs"
+    },
     
     "./style.css": "./dist/style.css"
   },
